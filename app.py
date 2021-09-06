@@ -7,6 +7,10 @@ from flask_restful import Api, Resource, abort, reqparse
 app=Flask(__name__)
 api=Api(app)
 
+@app.route('/')
+def hello():
+    return "Welcome Your BOT, It has Successfully BORN OUT ! "
+
 cred=credentials.Certificate('firebase-sdk.json')
 
 firebase_admin.initialize_app(cred,{
